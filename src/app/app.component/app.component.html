@@ -1,0 +1,26 @@
+<div>
+	Why hello there!
+</div>
+
+<hr/>
+
+<div>
+	<label>
+		Set core model:
+	</label>
+	<select [ngModel]="selectedCoreModel" (ngModelChange)="onSetCoreModel($event)">
+		<option [value]="null" disabled>
+			None
+		</option>
+		<option *ngFor="let coreModel of coreModels$ | async" [ngValue]="coreModel">
+			{{ coreModel.label }}
+		</option>
+	</select>
+	<button (click)="onClearCoreModel()">
+		Clear
+	</button>
+
+	<pre>
+		{{ selectedCoreModel | json }}
+	</pre>
+</div>
