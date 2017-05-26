@@ -1,10 +1,10 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { AppState, getCoreModels, getSelectedCoreModel } from '../../ngrx';
 import { ClearCoreModelAction, SetCoreModelAction, CoreModel } from '../../ngrx/core';
 
-import { Subscription } from "rxjs/Subscription";
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
 	selector: 'app',
