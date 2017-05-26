@@ -1,19 +1,19 @@
-var path = require('path');
+const path = require('path');
 
-var root = path.resolve(__dirname);
-var source = path.resolve(root, 'src');
-var dist = path.resolve(root, 'dist');
+const root = path.resolve(__dirname);
+const source = path.resolve(root, 'src');
+const dist = path.resolve(root, 'dist');
 
-var webpack = require('webpack');
-var webpackAotPlugin = require('@ngtools/webpack');
-var webpackExtractPlugin = require('extract-text-webpack-plugin');
-var webpackHtmlPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const webpackAotPlugin = require('@ngtools/webpack');
+const webpackExtractPlugin = require('extract-text-webpack-plugin');
+const webpackHtmlPlugin = require('html-webpack-plugin');
 
-var extractSass = new webpackExtractPlugin({
+const extractSass = new webpackExtractPlugin({
 	filename: 'app.css'
 });
 
-var sassLoader = {
+const sassLoader = {
 	loader: 'sass-loader',
 	options: {
 		includePaths: [
@@ -81,7 +81,7 @@ module.exports = function (webpackEnvironment) {
 		});
 
 		pluginsConfig.push(new webpackAotPlugin.AotPlugin({
-			tsConfigPath: path.resolve(source, 'tsconfig.json'),
+			tsConfigPath: path.resolve(root, 'tsconfig.json'),
 			entryModule: path.resolve(source, 'app', 'app.module#AppModule')
 		}));
 
