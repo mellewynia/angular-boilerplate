@@ -1,0 +1,17 @@
+# Editor configuration, see: http://editorconfig.org
+# Editor configuration properties: https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+root = true
+
+[*]
+charset = utf-8
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+max_line_length = off
+time_trailing_whitespace = false
+
+[*.html]
+trim_trailing_whitespace = false
