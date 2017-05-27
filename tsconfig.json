@@ -14,8 +14,9 @@
 		]
 	},
 	"exclude": [
-		"main.aot.ts",
-		"**/*.spec.ts"
+		"node_modules/*",
+		"src/main.aot.ts",
+		"src/**/*.spec.ts"
 	],
 	"angularCompilerOptions": {
 		"genDir": "aot/",

@@ -1,5 +1,5 @@
-import { CoreActions, CoreActionTypes, SetCoreModelAction } from "./actions";
-import { CoreModel } from "./models";
+import { CoreActions, CoreActionTypes, SetCoreModelAction } from './actions';
+import { CoreModel } from './models';
 
 export interface CoreState {
 	availableCoreModels: CoreModel[],
